@@ -1,2 +1,2 @@
-# rick
-Rick is a rumbling scientist and also a Twitter bot.
+# Maudlin scientist 
+Maudlin Scientist is a young lady who's into hard science and emotional turmoil at the same time.
