@@ -49,7 +49,6 @@ sentence_starts = [
     'In this',
     'There was',
     'Meanwhile, the',
-    'Such as',
     'As this',
     'But fortunately',
     'It appears',
