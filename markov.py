@@ -17,12 +17,7 @@ input_ = ''
 
 for file in files:
     with open(file, 'r') as file:
-        input_ += file.read()    
-
-pprint(input_)
-
-# with open('resources/austen.txt', 'r') as austen:
-#    input_ = austen.read()
+        input_ += file.read()
 
 # TODO: make the rest into functions
 
