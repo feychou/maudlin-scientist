@@ -21,7 +21,7 @@ for file in files:
 
 # TODO: make the rest into functions
 
-input_list = input_.replace('“', '').replace('”', '').split()
+input_list = input_.split()
 
 # Fill the parts dictionary with prefixes (pairs of words) mapping to lists of
 # possible suffixes
