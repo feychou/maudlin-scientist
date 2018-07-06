@@ -1,0 +1,92 @@
+We use a number of typographical conventions for the
+formal notation, some of which are quite particular to the
+present work:
+The two sets of highly structured, ‘top-level’, state values,
+are denoted with bold lowercase Greek letters. They
+fall into those of world-state, which are denoted σ (or a
+variant thereupon) and those of machine-state, µ.
+Functions operating on highly structured values are
+denoted with an upper-case Greek letter, e.g. Υ, the
+Ethereum state transition function.
+For most functions, an uppercase letter is used, e.g. C,
+the general cost function. These may be subscripted to
+denote specialised variants, e.g. CSSTORE, the cost function
+for the SSTORE operation. For specialised and possibly
+externally defined functions, we may format as typewriter
+text, e.g. the Keccak-256 hash function (as per the winning
+entry to the SHA-3 contest by Bertoni et al. [2017], rather
+than later releases), is denoted KEC (and generally referred
+to as plain Keccak). Also KEC512 is referring to the Keccak
+512 hash function.
+Tuples are typically denoted with an upper-case letter,
+e.g. T, is used to denote an Ethereum transaction. This
+symbol may, if accordingly defined, be subscripted to refer
+to an individual component, e.g. Tn, denotes the nonce
+of said transaction. The form of the subscript is used to
+denote its type; e.g. uppercase subscripts refer to tuples
+with subscriptable components.
+Scalars and fixed-size byte sequences (or, synonymously,
+arrays) are denoted with a normal lower-case letter, e.g.
+n is used in the document to denote a transaction nonce.
+Those with a particularly special meaning may be Greek,
+e.g. δ, the number of items required on the stack for a
+given operation.
+Arbitrary-length sequences are typically denoted as a
+bold lower-case letter, e.g. o is used to denote the byte
+sequence given as the output data of a message call. For
+particularly important values, a bold uppercase letter may
+be used.
+Throughout, we assume scalars are non-negative integers
+and thus belong to the set N. The set of all byte
+sequences is B, formally defined in Appendix B. If such
+a set of sequences is restricted to those of a particular
+length, it is denoted with a subscript, thus the set of all
+byte sequences of length 32 is named B32 and the set of
+all non-negative integers smaller than 2256 is named N256.
+This is formally defined in section 4.3.
+Square brackets are used to index into and reference
+individual components or subsequences of sequences, e.g.
+µs
+[0] denotes the first item on the machine’s stack. For
+subsequences, ellipses are used to specify the intended
+range, to include elements at both limits, e.g. µm[0..31]
+denotes the first 32 items of the machine’s memory.
+In order to avoid issues of network abuse and to sidestep
+the inevitable questions stemming from Turing completeness,
+all programmable computation in Ethereum is subject
+to fees. The fee schedule is specified in units of gas (see Appendix
+G for the fees associated with various computation).
+Thus any given fragment of programmable computation
+(this includes creating contracts, making message calls,
+utilising and accessing account storage and executing operations
+on the virtual machine) has a universally agreed
+cost in terms of gas.
+Every transaction has a specific amount of gas associated
+with it: gasLimit. This is the amount of gas which
+is implicitly purchased from the sender’s account balance.
+The purchase happens at the according gasPrice, also
+specified in the transaction. The transaction is considered
+invalid if the account balance cannot support such
+a purchase. It is named gasLimit since any unused gas
+at the end of the transaction is refunded (at the same
+rate of purchase) to the sender’s account. Gas does not
+exist outside of the execution of a transaction. Thus for
+accounts with trusted code associated, a relatively high
+gas limit may be set and left alone.
+In general, Ether used to purchase gas that is not refunded
+is delivered to the beneficiary address, the address
+of an account typically under the control of the miner.
+Transactors are free to specify any gasPrice that they
+wish, however miners are free to ignore transactions as
+they choose. A higher gas price on a transaction will therefore
+cost the sender more in terms of Ether and deliver
+a greater value to the miner and thus will more likely be
+selected for inclusion by more miners. Miners, in general,
+will choose to advertise the minimum gas price for which
+they will execute transactions and transactors will be free
+to canvas these prices in determining what gas price to
+offer. Since there will be a (weighted) distribution of minimum
+acceptable gas prices, transactors will necessarily
+have a trade-off to make between lowering the gas price
+and maximising the chance that their transaction will be
+mined in a timely manner.

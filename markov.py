@@ -10,7 +10,11 @@ files = [
     'resources/spaaace.txt',
     'resources/fungi.txt',
     'resources/doppler.txt',
-    'resources/jane.txt'
+    'resources/jane.txt',
+    'resources/logic.txt',
+    'resources/differential_equations.txt',
+    'resources/ethereum.txt',
+    'resources/georgette.txt'
 ]
 
 input_ = ''
@@ -59,7 +63,21 @@ sentence_starts = [
     'A common',
     'The reason',
     'On that',
-    'From my'
+    'From my',
+    'It has',
+    'The only',
+    'But since',
+    'A higher',
+    'For most',
+    'So was',
+    'Up the',
+    'The two',
+    'This question',
+    'The form',
+    'And as',
+    'From this',
+    'Such is',
+    'Nothing therefore'
 ]
 sentence = random.choice(sentence_starts)
 prefix = tuple(sentence.split())

@@ -1,0 +1,66 @@
+We have said that we have a certain direction
+at each point of our surface. Can we in general do this
+without exception? In general we cannot. In each point, in
+general, we shall have a certain tangent direction defined, but
+there will be certain singular points in the correspondence.
+The only case in which the correspondence can be complete
+is when the surface is of genus one. For instance, there
+must be singular points for the genus zero. In that case,
+Poincar´e stated that every trajectory is either a closed one,
+or finishes in a singular point, or is asymptotic to a closed
+curve. For genus one, singular points may be absent, but
+the shapes of curves verifying the equation may yet be much
+more complicated.
+Differential equations of higher order will also of course
+(and did indeed in some parts of Poincar´e’s work) require
+the intervention of analysis situs. But the difficulty will
+be much greater, as in hyper-spaces this theory becomes as
+complicated as it was simple in Riemann’s hands when applied
+to ordinary surfaces. These higher chapters of analysis situs
+begin, however, to be well known, and though they could
+not hitherto be applied to differential equations, their rˆole
+is already clear, owing to the works of Picard and Poincar´e,
+in the natural generalization of Riemann’s original theory. I
+mean the difficult theory of algebraic surfaces and algebraic
+functions of two or more independent variables.
+In the line of partial differential equations, we must point
+out a very remarkable analogous example due to Volterra and
+concerning the problem of elasticity. Generally speaking, if
+the external forces and also the peripheric efforts acting on
+a homogeneous solid body are zero, so will be the stress at
+every point of its substance. More precisely in such a body of
+simply connected shape, stress could only appear under those
+conditions if singular points would exist where they would
+cease to obey the general laws known for their distribution.
+These peculiar distinctions are closely connected with the
+fundamental distinctions of analysis situs. They are due to the
+fact that there are many ways essentially distinct from each
+other, of passing from one point to another of a circumference
+(according to the number of revolutions performed around the
+curve) whilst any line joining two points of the surface of a
+sphere can be changed into any other one by continuous
+deformation.
+This question of correspondences and Euler’s theorem on
+polyhedra would give us the most simple and elementary
+instances in which the results are profoundly modified by
+considerations of analysis situs, if another one did not exist
+which concerns the principles of geometry themselves. I
+mean the Klein-Clifford conception of space. But since this
+conception has been fully and definitively developed in Klein’s
+Evanston Colloquium, there is no use insisting on it. We
+want only to remember that this question bears to a high
+degree the general character of those which were spoken of
+in the present lecture. Klein-Clifford’s space and Euclid’s
+ordinary space are not only approximately, but fully and
+rigorously identical as long as the figures dealt with do not
+exceed certain dimensions. Nothing therefore can distinguish
+them from each other in their infinitesimal properties. Yet
+they prove quite different if sufficiently great distances are
+considered.
+This example, as you see, exactly like the previous ones,
+teaches us that some fundamental features of mathematical
+solutions may remain hidden as long as we confine ourselves
+to the details; so that in order to discover them we must
+necessarily turn our attention towards the mode of synthesis
+of those details which introduce the point of view of analysis
+situs

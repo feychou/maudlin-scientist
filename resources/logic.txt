@@ -1,0 +1,130 @@
+Logic is regarded by Spencer as co-ordinate with Mathematics, both
+being Abstract Sciences--that is, sciences of the _relations_ in which
+things stand to one another, whatever the particular things may be that
+are so related; and this view seems to be, on the whole, just--subject,
+however, to qualifications that will appear presently.
+
+Mathematics treats of the relations of all sorts of things considered as
+quantities, namely, as equal to, or greater or less than, one another.
+Things may be quantitatively equal or unequal in _degree_, as in
+comparing the temperature of bodies; or in _duration_; or in _spatial
+magnitude_, as with lines, superficies, solids; or in _number_. And it
+is assumed that the equality or inequality of things that cannot be
+directly compared, may be proved indirectly on the assumption that
+'things equal to the same thing are equal,' etc.
+
+Logic also treats of the relations of all sorts of things, but not as to
+their quantity. It considers (i) that one thing may be like or unlike
+another in certain attributes, as that iron is in many ways like tin or
+lead, and in many ways unlike carbon or sulphur: (ii) that attributes
+co-exist or coinhere (or do not) in the same subject, as metallic
+lustre, hardness, a certain atomic weight and a certain specific gravity
+coinhere in iron: and (iii) that one event follows another (or is the
+effect of it), as that the placing of iron in water causes it to rust.
+The relations of likeness and of coinherence are the ground of
+Classification; for it is by resemblance of coinhering attributes that
+things form classes: coinherence is the ground of judgments concerning
+Substance and Attribute, as that iron is metallic; and the relation of
+succession, in the mode of Causation, is the chief subject of the
+department of Induction. It is usual to group together these relations
+of attributes and of order in time, and call them qualitative, in order
+to contrast them with the quantitative relations which belong to
+Mathematics. And it is assumed that qualitative relations of things,
+when they cannot be directly perceived, may be proved indirectly by
+assuming the axiom of the Syllogism (chap. ix.) and the law of Causation.
+
+So far, then, Logic and Mathematics appear to be co-ordinate and
+distinct sciences. But we shall see hereafter that the satisfactory
+treatment of that special order of events in time which constitutes
+Causation, requires a combination of Logic with Mathematics; and so does
+the treatment of Probability. And, again, Logic may be said to be, in a
+certain sense, 'prior to' or 'above' Mathematics as usually treated. For
+the Mathematics assume that one magnitude must be either equal or
+unequal to another, and that it cannot be both equal and unequal to it,
+and thus take for granted the principles of Contradiction and Excluded
+Middle; but the statement and elucidation of these Principles are left
+to Logic (chap. vi.). The Mathematics also classify and define
+magnitudes, as (in Geometry) triangles, squares, cubes, spheres; but the
+principles of classification and definition remain for Logic to
+discuss.
+
+As to the concrete Sciences, such as Astronomy, Chemistry, Zoology,
+Sociology--Logic (as well as Mathematics) is implied in them all; for
+all the propositions of which they consist involve causation,
+co-existence, and class-likeness. Logic is therefore said to be prior to
+them or above them: meaning by 'prior' not that it should be studied
+earlier, for that is not a good plan; meaning by 'above' not in dignity,
+for distinctions of dignity amongst liberal studies are absurd. But it
+is a philosophical idiom to call the abstract 'prior to,' or 'higher
+than,' the concrete (see Porphyry's Tree, chap. xxii. § 8); and Logic is
+more abstract than Astronomy or Sociology. Philosophy may thank that
+idiom for many a foolish notion.
+
+But, as we have seen, Logic does not investigate the truth,
+trustworthiness, or validity of its own principles; nor does
+Mathematics: this task belongs to Metaphysics, or Epistemology, the
+criticism of knowledge and beliefs.
+
+Logic assumes, for example, that things are what to a careful scrutiny
+they seem to be; that animals, trees, mountains, planets, are bodies
+with various attributes, existing in space and changing in time; and
+that certain principles, such as Contradiction and Causation, are true
+of things and events. But Metaphysicians have raised many plausible
+objections to these assumptions. It has been urged that natural objects
+do not really exist on their own account, but only in dependence on some
+mind that contemplates them, and that even space and time are only our
+way of perceiving things; or, again, that although things do really
+exist on their own account, it is in an entirely different way from that
+in which we know them. As to the principle of Contradiction--that if an
+object has an attribute, it cannot at the same time and in the same way
+be without it (e.g., if an animal is conscious, it is false that it is
+not conscious)--it has been contended that the speciousness of this
+principle is only due to the obtuseness of our minds, or even to the
+poverty of language, which cannot make the fine distinctions that exist
+in Nature. And as to Causation, it is sometimes doubted whether events
+always have physical causes; and it is often suggested that, granting
+they have physical causes, yet these are such as we can neither perceive
+nor conceive; belonging not to the order of Nature as we know it, but to
+the secret inwardness and reality of Nature, to the wells and reservoirs
+of power, not to the spray of the fountain that glitters in our
+eyes--'occult causes,' in short. Now these doubts and surmises are
+metaphysical spectres which it remains for Metaphysics to lay. Logic has
+no direct concern with them (although, of course, metaphysical
+discussion is expected to be logical), but keeps the plain path of plain
+beliefs, level with the comprehension of plain men. Metaphysics, as
+examining the grounds of Logic itself, is sometimes regarded as 'the
+higher Logic'; and, certainly, the study of Metaphysics is necessary to
+every one who would comprehend the nature and functions of Logic, or the
+place of his own mind and of Reason in the world.
+
+Controversy as to the Import of Propositions really turns upon a
+difference of opinion as to the scope of Logic and the foundations of
+knowledge. Mill was dissatisfied with the "congruity" of concepts as the
+basis of a judgment. Clearly, mere congruity does not justify belief. In
+the proposition _Water rusts iron_, the concepts _water_, _rust_ and
+_iron_ may be congruous, but does any one assert their connection on
+that ground? In the proposition _Murderers are haunted by the ghosts of
+their victims_, the concepts _victim_, _murderer_, _ghost_ have a high
+degree of congruity; yet, unfortunately, I cannot believe it: there
+seems to be no such cheap defence of innocence. Now, Mill held that
+Logic is concerned with the grounds of belief, and that the scope of
+Logic includes Induction as well as Deduction; whereas, according to
+Hamilton, Induction is only Modified Logic, a mere appendix to the
+theory of the "forms of thought as thought." Indeed, Mill endeavoured in
+his _Logic_ to probe the grounds of belief deeper than usual, and
+introduced a good deal of Metaphysics--either too much or not
+enough--concerning the ground of axioms. But, at any rate, his great
+point was that belief, and therefore (for the most part) the Real
+Proposition, is concerned not merely with the relations of words, or
+even of ideas, but with matters of fact; that is, both propositions and
+judgments point to something further, to the relations of things which
+we can examine, not merely by thinking about them (comparing them in
+thought), but by observing them with the united powers of thought and
+perception. This is what convinces us that _water rusts iron_: and the
+difficulty of doing this is what prevents our feeling sure that
+_murderers are haunted by the ghosts of their victims_. Hence, although
+Mill's definition of a proposition, given above, is adequate for
+propositions in general; yet that kind of proposition (the Real) with
+regard to which Logic (in Mill's view) investigates the conditions of
+proof, may be more explicitly and pertinently defined as 'a predication
+concerning the relation of matters of fact.'
