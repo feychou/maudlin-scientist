@@ -1,0 +1,150 @@
+Matrix Factorization Methods. Matrix factorization
+methods for generating low-dimensional
+word representations have roots stretching as far
+back as LSA. These methods utilize low-rank approximations
+to decompose large matrices that
+capture statistical information about a corpus. The
+particular type of information captured by such
+matrices varies by application. In LSA, the matrices
+are of “term-document” type, i.e., the rows
+correspond to words or terms, and the columns
+correspond to different documents in the corpus.
+In contrast, the Hyperspace Analogue to Language
+(HAL) (Lund and Burgess, 1996), for example,
+utilizes matrices of “term-term” type, i.e., the rows
+and columns correspond to words and the entries
+correspond to the number of times a given word
+occurs in the context of another given word.
+A main problem with HAL and related methods
+is that the most frequent words contribute a
+disproportionate amount to the similarity measure:
+the number of times two words co-occur with the
+or and, for example, will have a large effect on
+their similarity despite conveying relatively little
+about their semantic relatedness. A number of
+techniques exist that addresses this shortcoming of
+HAL, such as the COALS method (Rohde et al.,
+2006), in which the co-occurrence matrix is first
+transformed by an entropy- or correlation-based
+normalization. An advantage of this type of transformation
+is that the raw co-occurrence counts,
+which for a reasonably sized corpus might span
+8 or 9 orders of magnitude, are compressed so as
+to be distributed more evenly in a smaller interval.
+A variety of newer models also pursue this
+approach, including a study (Bullinaria and Levy,
+2007) that indicates that positive pointwise mutual
+information (PPMI) is a good transformation.
+More recently, a square root type transformation
+in the form of Hellinger PCA (HPCA) (Lebret and
+Collobert, 2014) has been suggested as an effective
+way of learning word representations.
+Shallow Window-Based Methods. Another
+approach is to learn word representations that aid
+in making predictions within local context windows.
+For example, Bengio et al. (2003) introduced
+a model that learns word vector representations
+as part of a simple neural network architecture
+for language modeling. Collobert and Weston
+(2008) decoupled the word vector training from
+the downstream training objectives, which paved
+the way for Collobert et al. (2011) to use the full
+context of a word for learning the word representations,
+rather than just the preceding context as is
+the case with language models.
+Recently, the importance of the full neural network
+structure for learning useful word representations
+has been called into question. The
+skip-gram and continuous bag-of-words (CBOW)
+models of Mikolov et al. (2013a) propose a simple
+single-layer architecture based on the inner
+product between two word vectors. Mnih and
+Kavukcuoglu (2013) also proposed closely-related
+vector log-bilinear models, vLBL and ivLBL, and
+Levy et al. (2014) proposed explicit word embeddings
+based on a PPMI metric.
+In the skip-gram and ivLBL models, the objective
+is to predict a word’s context given the word
+itself, whereas the objective in the CBOW and
+vLBL models is to predict a word given its context.
+Through evaluation on a word analogy task,
+these models demonstrated the capacity to learn
+linguistic patterns as linear relationships between
+the word vectors.
+Unlike the matrix factorization methods, the
+shallow window-based methods suffer from the
+disadvantage that they do not operate directly on
+the co-occurrence statistics of the corpus. Instead,
+these models scan context windows across the entire
+corpus, which fails to take advantage of the
+vast amount of repetition in the data.
+3 The GloVe Model
+The statistics of word occurrences in a corpus is
+the primary source of information available to all
+unsupervised methods for learning word representations,
+and although many such methods now exist,
+the question still remains as to how meaning
+is generated from these statistics, and how the resulting
+word vectors might represent that meaning.
+In this section, we shed some light on this question.
+We use our insights to construct a new model
+for word representation which we call GloVe, for
+Global Vectors, because the global corpus statistics
+are captured directly by the model.
+First we establish some notation. Let the matrix
+of word-word co-occurrence counts be denoted by
+X, whose entries Xi j tabulate the number of times
+word j occurs in the context of word i. Let Xi = P
+k Xik be the number of times any word appears
+in the context of word i. Finally, let Pi j = P(j|i) =
+Xi j/Xi be the probability that word j appear in the
+Table 1: Co-occurrence probabilities for target words ice and steam with selected context words from a 6
+billion token corpus. Only in the ratio does noise from non-discriminative words like water and fashion
+cancel out, so that large values (much greater than 1) correlate well with properties specific to ice, and
+small values (much less than 1) correlate well with properties specific of steam.
+We set any unspecified parameters to their default
+values, assuming that they are close to optimal,
+though we acknowledge that this simplification
+should be relaxed in a more thorough analysis.
+In Fig. 4, we plot the overall performance on
+the analogy task as a function of training time.
+The two x-axes at the bottom indicate the corresponding
+number of training iterations for GloVe
+and negative samples for word2vec. We note
+that word2vec’s performance actually decreases
+if the number of negative samples increases beyond
+about 10. Presumably this is because the
+negative sampling method does not approximate
+the target probability distribution well.9
+For the same corpus, vocabulary, window size,
+and training time, GloVe consistently outperforms
+word2vec. It achieves better results faster, and
+also obtains the best results irrespective of speed.
+5 Conclusion
+Recently, considerable attention has been focused
+on the question of whether distributional word
+representations are best learned from count-based
+9
+In contrast, noise-contrastive estimation is an approximation
+which improves with more negative samples. In Table
+1 of (Mnih et al., 2013), accuracy on the analogy task is a
+non-decreasing function of the number of negative samples.
+methods or from prediction-based methods. Currently,
+prediction-based models garner substantial
+support; for example, Baroni et al. (2014) argue
+that these models perform better across a range of
+tasks. In this work we argue that the two classes
+of methods are not dramatically different at a fundamental
+level since they both probe the underlying
+co-occurrence statistics of the corpus, but
+the efficiency with which the count-based methods
+capture global statistics can be advantageous.
+We construct a model that utilizes this main benefit
+of count data while simultaneously capturing
+the meaningful linear substructures prevalent in
+recent log-bilinear prediction-based methods like
+word2vec. The result, GloVe, is a new global
+log-bilinear regression model for the unsupervised
+learning of word representations that outperforms
+other models on word analogy, word similarity,
+and named entity recognition tasks.
