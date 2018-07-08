@@ -80,7 +80,20 @@ def markov(word_chain):
         'The form',
         'And as',
         'From this',
-        'Nothing therefore'
+        'Nothing therefore',
+        'This question',
+        'This example',
+        'In such',
+        'The uses',
+        'The little',
+        'Since there',
+        'Yet there',
+        'Upon preessure',
+        'So far',
+        'A world',
+        'And analogy',
+        'A steam-engine',
+        'The next'
     ]
     sentence = random.choice(prefixes)
     prefix = tuple(sentence.split())
@@ -100,6 +113,7 @@ def main():
     word_chain = build_word_chain(file_content)
     tweet = markov(word_chain)
     status = api.PostUpdate(tweet)
+    print(tweet)
     print(status)
 
 if __name__ == "__main__":
