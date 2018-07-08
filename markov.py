@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import random
-from pprint import pprint
 
 files = [
     'resources/austen.txt',
@@ -17,77 +16,83 @@ files = [
     'resources/georgette.txt'
 ]
 
-input_ = ''
+def get_files_content():
+    text = ''
+    for file in files:
+        with open(file, 'r') as file:
+            text += file.read()
+    return text
 
-for file in files:
-    with open(file, 'r') as file:
-        input_ += file.read()
+def build_word_chain(text):
+    text_list = text.split()
+    word_chain = {}
 
-# TODO: make the rest into functions
+    for i in range(len(text_list) - 3):
+        prefix = (text_list[i], text_list[i + 1])
+        suffix = text_list[i + 2]
+        if prefix in word_chain:
+            word_chain[prefix].append(suffix)
+        else:
+            word_chain[prefix] = [suffix]
+    return word_chain
 
-input_list = input_.split()
+def markov(word_chain):
+    prefixes = [
+        'I am',
+        'He is',
+        'They found',
+        'So my',
+        'It is',
+        'Unlike the',
+        'The second',
+        'To think',
+        'For the',
+        'In this',
+        'There was',
+        'Meanwhile, the',
+        'As this',
+        'But fortunately',
+        'It appears',
+        'As to',
+        'A case',
+        'The affinity',
+        'In all',
+        'A common',
+        'The reason',
+        'On that',
+        'From my',
+        'It has',
+        'The only',
+        'But since',
+        'A higher',
+        'For most',
+        'So was',
+        'Up the',
+        'The two',
+        'This question',
+        'The form',
+        'And as',
+        'From this',
+        'Nothing therefore'
+    ]
+    sentence = random.choice(prefixes)
+    prefix = tuple(sentence.split())
 
-# Fill the parts dictionary with prefixes (pairs of words) mapping to lists of
-# possible suffixes
-parts = {}
+    while True:
+        suffix = random.choice(word_chain[prefix])
+        if len(sentence) + len(suffix) + 1 >= 280:
+            sentence += '.'
+            break
+        sentence += ' ' + suffix
+        prefix = (prefix[1], suffix)
 
-for i in range(len(input_list) - 3):
-    prefix = (input_list[i], input_list[i + 1])
-    suffix = input_list[i + 2]
-    if prefix in parts:
-        parts[prefix].append(suffix)
-    else:
-        parts[prefix] = [suffix]
+    return sentence
 
-# Build the sentence
-sentence_starts = [
-    'I am',
-    'He is',
-    'They found',
-    'So my',
-    'It is',
-    'Unlike the',
-    'The second',
-    'To think',
-    'For the',
-    'In this',
-    'There was',
-    'Meanwhile, the',
-    'As this',
-    'But fortunately',
-    'It appears',
-    'As to',
-    'A case',
-    'The affinity',
-    'In all',
-    'A common',
-    'The reason',
-    'On that',
-    'From my',
-    'It has',
-    'The only',
-    'But since',
-    'A higher',
-    'For most',
-    'So was',
-    'Up the',
-    'The two',
-    'This question',
-    'The form',
-    'And as',
-    'From this',
-    'Such is',
-    'Nothing therefore'
-]
-sentence = random.choice(sentence_starts)
-prefix = tuple(sentence.split())
+def main():
+    file_content = get_files_content()
+    word_chain = build_word_chain(file_content)
+    tweet = markov(word_chain)
+    print(tweet)
 
-while True:
-    suffix = random.choice(parts[prefix])
-    if len(sentence) + len(suffix) + 1 >= 280:
-        sentence += '.'
-        break
-    sentence += ' ' + suffix
-    prefix = (prefix[1], suffix)
-
-print(sentence)
+if __name__ == "__main__":
+    main()
