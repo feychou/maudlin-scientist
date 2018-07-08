@@ -88,7 +88,7 @@ def markov(word_chain):
         'The little',
         'Since there',
         'Yet there',
-        'Upon preessure',
+        'Upon pressure',
         'So far',
         'A world',
         'And analogy',
