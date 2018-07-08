@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import random
+import twitter
+import config
 
 files = [
     'resources/austen.txt',
@@ -15,6 +17,11 @@ files = [
     'resources/ethereum.txt',
     'resources/georgette.txt'
 ]
+
+api = twitter.Api(consumer_key=config.consumer_key,
+                  consumer_secret=config.consumer_secret,
+                  access_token_key=config.access_token_key,
+                  access_token_secret=config.access_token_secret)
 
 def get_files_content():
     text = ''
@@ -92,7 +99,8 @@ def main():
     file_content = get_files_content()
     word_chain = build_word_chain(file_content)
     tweet = markov(word_chain)
-    print(tweet)
+    status = api.PostUpdate(tweet)
+    print(status)
 
 if __name__ == "__main__":
     main()
